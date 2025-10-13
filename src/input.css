@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'Assassin';
+  src: url('assets/fonts/Assassin.woff2') format('woff2'),
+    url('assets/fonts/Assassin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .font-assassin {
+    font-family: 'Assassin', 'sans-serif';
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  a[aria-current="page"] {
+    border-bottom: 2px solid white;
+    color: white;
+  }
+
+  /*Máscara para el nombre y descripción del personaje*/
+
+  .medieval-box {
+    mask: radial-gradient(20px at 20px 20px, #0000 98%, #000) -20px -20px;
+  }
+
+  /*Efectos imagen detrás del personaje*/
+
+  .ac-unity:hover .effect-shake {
+    animation: shake 15s ease-in-out 0s infinite normal none;
+  }
+
+  .gear-spin {
+    transition: transform 50s ease-out;
+  }
+
+  .ac-syndicate:hover .gear-spin {
+    transform: rotate(360deg);
+  }
+
+  .effect {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .ac-altair:hover .effect,
+  .ac-origins:hover .effect,
+  .ac-valhalla:hover .effect {
+    transform: scale(1.1);
+  }
+
+  .effect-vibrate {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .ac-ezio:hover .effect-vibrate,
+  .ac-odyssey:hover .effect-vibrate {
+    animation: vibrate 3s ease-in-out 0s infinite normal none;
+  }
+
+  .effect-pulse {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .ac-iii:hover .effect-pulse,
+  .ac-mirage:hover .effect-pulse {
+    animation: pulse 3s ease-in-out 0s infinite normal none;
+  }
+}
+
+/* Shake */
+@keyframes shake {
+  0%,
+  100% {
+	transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+	transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+	transform: translateY(8px);
+  }
+
+  80% {
+	transform: translateY(6.4px);
+  }
+
+  90% {
+	transform: translateY(-6.4px);
+  }
+}
+
+
+/* Vibrate */
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}

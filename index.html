@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Página web realizada en Tailwind sobre algunos juegos de la franquicia Assassin's Creed de Ubisoft">
+    <meta name="keywords"
+        content="html, css, tailwind, web, web design, web development,  responsive, responsive design, responsive web design, project, frontend project, frontend, assassin's creed, games, ubisoft">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+
+    <title>Assassin's Creed Project</title>
+
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preload" href="Assassin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="Assassin.woff" as="font" type="font/woff" crossorigin>
+
+
+</head>
+
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+    <header class="text-center">
+        <!-- Navbar -->
+        <nav class="bg-gray-600 p-4 flex items-center justify-between md:justify-evenly">
+            <div class="flex items-center gap-4">
+                <img src="assets/img/ac_franchise_logo_desktop.png" alt="Logo Assassin's Creed"
+                    class="w-28 object-contain">
+            </div>
+
+            <!-- Botón hamburguesa -->
+            <button id="menu-toggle"
+                class="md:hidden text-white focus:outline-none ml-auto transition-all duration-300 ease-in-out">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+
+            <!-- Enlaces de navegación -->
+            <ul id="menu" class="hidden md:flex gap-20 text-2xl text-white font-assassin group">
+                <li>
+                    <a href="index.html" aria-current="page"
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white focus:border-white active:border-white transition-all duration-300 ease group-hover:text-gray-400 hover:text-white focus:text-slate-400 active:text-zinc-300 outline-none">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="origins.html"
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">
+                        Origins
+                    </a>
+                </li>
+                <li>
+                    <a href="odyssey.html"
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">
+                        Odyssey
+                    </a>
+                </li>
+                <li>
+                    <a href="valhalla.html"
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">
+                        Valhalla
+                    </a>
+                </li>
+                <li>
+                    <a href="mirage.html"
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">
+                        Mirage
+                    </a>
+                </li>
+            </ul>
+
+            <div class="w-0 md:w-16"></div>
+        </nav>
+
+        <!-- Menú móvil desplegable -->
+        <ul id="mobile-menu"
+            class="md:hidden hidden flex-col bg-gray-900 text-white p-6 text-2xl text-right leading-16 font-assassin group">
+            <li>
+                <a href="index.html"
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Inicio</a>
+            </li>
+            <li>
+                <a href="origins.html"
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Origins</a>
+            </li>
+            <li>
+                <a href="odyssey.html"
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Odyssey</a>
+            </li>
+            <li>
+                <a href="valhalla.html"
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Valhalla</a>
+            </li>
+            <li>
+                <a href="mirage.html"
+                    class="pb-3  border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Mirage</a>
+            </li>
+        </ul>
+
+        <img src="assets/img/logo.png" alt="Logo" class="mx-auto mt-16 w-25 opacity-20">
+
+        <div class="flex flex-col items-center font-assassin text-white tracking-wide">
+            <h1 class="text-6xl -mt-1 -mb-3">Assassin's</h1>
+            <div class="flex items-center justify-center gap-4 mt-2">
+
+                <div class="h-px w-8 bg-gray-400"></div>
+
+                <span class="text-3xl whitespace-nowrap text-red-400">Creed</span>
+
+                <div class="h-px w-8 bg-gray-400"></div>
+            </div>
+        </div>
+
+        <div id="quote-carousel"
+            class="m-10 mt-10 text-center text-lg italic  text-slate-500 transition-opacity duration-700 ease-in-out">
+            “Nada es verdad, todo está permitido”
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+
+    <main>
+
+        <!--Hermandad-->
+
+        <section class="max-w-4xl mx-auto p-6 text-gray-300 text-lg leading-relaxed">
+
+            <h2 class="text-4xl text-center text-white font-assassin mb-10">La Hermandad</h2>
+
+            <p>La Hermandad de los Assassins es una organización secreta que lucha por la libertad, la justicia y el
+                libre albedrío. Fundada hace siglos, sus miembros operan en las sombras para proteger a la humanidad de
+                aquellos que buscan controlarla: los Templarios.</p>
+            <br>
+
+            <p>Guiados por el lema “Nada es verdad, todo está permitido”, los Assassins creen que la verdad no es
+                absoluta y que cada individuo debe forjar su propio destino. Su filosofía se basa en la discreción, la
+                agilidad y el uso del conocimiento ancestral para desmantelar sistemas opresivos desde dentro.</p>
+            <br>
+
+            <p>A lo largo de la historia, la Hermandad ha reclutado guerreros, sabios y rebeldes de todas las culturas:
+                desde Altaïr en Tierra Santa, hasta Ezio Auditore en el Renacimiento italiano, pasando por Bayek en el
+                Antiguo Egipto y Arno en la Revolución Francesa. Cada uno ha dejado su huella en la lucha eterna entre
+                libertad y control.</p>
+            <br>
+
+            <p>Los Assassins se entrenan en el arte del sigilo, el parkour, el combate cuerpo a cuerpo y el uso de la
+                icónica hoja oculta. Su símbolo —una A estilizada— representa la resistencia silenciosa que se extiende
+                por generaciones.</p>
+
+        </section>
+
+        <!--Sobre la saga-->
+
+        <section class="pt-12 pb-26 px-6 bg-gray-900 text-gray-300 text-lg leading-relaxed">
+            <h2 class="text-4xl text-center font-assassin text-white mb-10">Sobre la saga</h2>
+            <p class="max-w-4xl mx-auto">
+                Assassin's Creed es una franquicia de videojuegos desarrollada por
+                <a href="https://www.ubisoft.com/es-es/game/assassins-creed" target="_blank" rel="noopener noreferrer">
+                    <span class="sr-only">(se abre en una nueva pestaña)</span>
+                    Ubisoft</a>
+                que combina historia, acción y
+                ciencia ficción. Los jugadores reviven memorias genéticas a través del Animus, una máquina que permite
+                explorar el pasado de sus antepasados. La saga gira en torno a la lucha entre los Assassins, defensores
+                del
+                libre albedrío, y los Templarios, que buscan imponer el orden mediante el control.
+            </p>
+            <br>
+
+            <p class="max-w-4xl mx-auto">Assassin's Creed es una de las sagas más emblemáticas del mundo de los
+                videojuegos, conocida por su
+                mezcla única de historia, sigilo, exploración y narrativa épica. Desde su debut en 2007, la franquicia
+                ha transportado a millones de jugadores a distintas épocas y civilizaciones, permitiéndoles vivir como
+                Assassins en medio de conflictos históricos reales</p>
+            <br>
+
+            <p class="max-w-4xl mx-auto">Cada entrega de la saga combina hechos históricos con ficción, utilizando el
+                Animus —una tecnología que
+                permite revivir memorias genéticas— como puente entre el presente y el pasado. A través de este
+                dispositivo, los protagonistas exploran vidas de antiguos Assassins, descubriendo secretos ocultos,
+                artefactos poderosos y la eterna lucha contra los Templarios.</p>
+            <br>
+
+            <p class="max-w-4xl mx-auto mb-5">
+                La saga ha recorrido escenarios tan diversos como:
+            </p>
+            <ul class="list-disc list-inside mb-5 max-w-4xl mx-auto">
+                <li>Las Cruzadas en Tierra Santa (Altaïr)</li>
+                <li>El Renacimiento italiano (Ezio Auditore)</li>
+                <li>La Revolución Americana (Connor)</li>
+                <li>El Antiguo Egipto (Bayek)</li>
+                <li>La Grecia clásica (Kassandra/Alexios)</li>
+                <li>La Inglaterra victoriana, la Revolución Francesa y la era vikinga</li>
+            </ul>
+            <p class="max-w-4xl mx-auto">
+                Con cada entrega, <span class="text-red-400">Assassin’s Creed</span> ha evolucionado en mecánicas,
+                narrativa y escala, pasando de aventuras lineales a mundos abiertos inmersivos con elementos RPG. Más
+                que una serie de juegos, es una exploración profunda de la libertad, la memoria y el legado humano.
+            </p>
+
+        </section>
+
+        <!--Personajes-->
+
+        <section class="py-20 px-6 bg-gray-950 bg-opacity-90 bg-[url(assets/img/niebla.png)] bg-blend-overlay">
+            <h2 class="text-4xl font-assassin text-white mb-20 text-center">Personajes legendarios</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 max-w-6xl mx-auto text-center text-lg">
+                <!-- Altaïr Ibn-La'Ahad -->
+                <article class="relative ac-altair">
+                    <img src="./assets/img/ac_altair.png" alt="Imagen de fondo para Altair Ibn-La'Ahad"
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect" />
+                    <picture class="relative z-10">
+                        <source srcset="./assets/img/Altair.avif" type="image/avif">
+                        <source srcset="./assets/img/Altair.webp" type="image/webp">
+                        <img src="./assets/img/Altair.png" alt="Altaïr Ibn-La'Ahad"
+                            class="mx-auto h-64 object-contain rounded" />
+                    </picture>
+                    <div
+                        class="bg-[url('assets/img/pergamino.png')] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6">
+                        <h3 class="text-3xl font-assassin mb-3">Altaïr Ibn-La'Ahad</h3>
+                        <p>Maestro Assassin durante las Cruzadas. El primero en la saga</p>
+                    </div>
+                </article>
+                <!-- Ezio Auditore -->
+                <article class="relative ac-ezio">
+                    <img src="./assets/img/ac_ezio.png" alt="Imagen de fondo para Ezio Auditore"
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-vibrate" />
+                    <picture class="relative z-10">
+                        <source srcset="./assets/img/Ezio.avif" type="image/avif">
+                        <source srcset="./assets/img/Ezio.webp" type="image/webp">
+                        <img src="./assets/img/Ezio.png" alt="Ezio Auditore"
+                            class="mx-auto h-64 object-contain rounded" />
+                    </picture>
+                    <div
+                        class="bg-[url('assets/img/pergamino.png')] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6">
+                        <h3 class="text-2xl font-assassin mb-3">Ezio Auditore da Firenze</h3>
+                        <p>Líder del Renacimiento italiano. Protagonista de tres juegos</p>
+                    </div>
+                </article>
+                <!-- Connor Kenway -->
+                <article class="relative ac-iii">
+                    <img src="./assets/img/ac_iii.png" alt="Imagen de fondo para Connor Kenway"
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-pulse" />
+                    <picture class="relative z-10">
+                        <source srcset="./assets/img/Connor.avif" type="image/avif">
+                        <source srcset="./assets/img/Connor.webp" type="image/webp">
+                        <img src="./assets/img/Connor.png" alt="Connor Kenway"
+                            class="mx-auto h-64 object-contain rounded"/>
+                    </picture>
+                    <div
+                        class="bg-[url('assets/img/pergamino.png')] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6">
+                        <h3 class="text-3xl font-assassin mb-3">Connor Kenway</h3>
+                        <p>Héroe de la Revolución Americana. Mitad mohawk, mitad británico</p>
+                    </div>
+                </article>
+                <!-- Arno Dorian -->
+                <article class="relative ac-unity">
+                    <img src="./assets/img/ac_unity.png" alt="Imagen de fondo para Arno Dorian"
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-shake"/>
+                    <picture class="relative z-10">
+                        <source srcset="./assets/img/ArnoDorian.avif" type="image/avif">
+                        <source srcset="./assets/img/ArnoDorian.webp" type="image/webp">
+                        <img src="./assets/img/ArnoDorian.png" alt="Arno Dorian"
+                            class="mx-auto h-64 object-contain rounded"/>
+                    </picture>
+                    <div
+                        class="bg-[url('assets/img/pergamino.png')] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6 relative z-10">
+                        <h3 class="text-3xl font-assassin mb-3">Arno Dorian</h3>
+                        <p>Assassin francés durante la Revolución. Protagonista de Unity</p>
+                    </div>
+                </article>
+                <!-- Evie y Jacob Frye -->
+                <article class="relative ac-syndicate">
+                    <img src="./assets/img/ac_syndicate.png" alt="Imagen de fondo para Evie y Jacob Frye"
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 gear-spin"/>
+                    <picture class="relative z-10">
+                        <source srcset="./assets/img/Evie_Jacob_Frye.avif" type="image/avif">
+                        <source srcset="./assets/img/Evie_Jacob_Frye.webp" type="image/webp">
+                        <img src="./assets/img/Evie_Jacob_Frye.png" alt="Evie y Jacob Frye"
+                            class="mx-auto h-64 object-contain rounded" />
+                    </picture>
+                    <div
+                        class="bg-[url('assets/img/pergamino.png')] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6 relative z-10">
+                        <h3 class="text-3xl font-assassin mb-3">Evie y Jacob Frye</h3>
+                        <p>Hermanos que liberan Londres en la era victoriana</p>
+                    </div>
+                </article>
+                <!-- Bayek de Siwa -->
+                <article class="relative ac-origins">
+                    <img src="./assets/img/ac_origins.png" alt="Imagen de fondo para Bayek de Siwa"
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect"/>
+                    <picture class="relative z-10">
+                        <source srcset="./assets/img/Bayek.avif" type="image/avif">
+                        <source srcset="./assets/img/Bayek.webp" type="image/webp">
+                        <img src="./assets/img/Bayek.png" alt="Bayek de Siwa"
+                            class="mx-auto h-64 object-contain rounded"/>
+                    </picture>
+                    <div
+                        class="bg-[url(assets/img/pergamino.png)] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6">
+                        <h3 class="text-3xl font-assassin mb-3">Bayek de Siwa</h3>
+                        <p>Fundador de la Hermandad en Egipto. Guerrero y protector</p>
+                    </div>
+                </article>
+                <!-- Kassandra -->
+                <article class="relative ac-odyssey">
+                    <img src="./assets/img/ac_odyssey.png" alt="Imagen de fondo para Kassandra"
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-vibrate"/>
+                    <picture class="relative z-10">
+                        <source srcset="./assets/img/Kassandra.avif" type="image/avif">
+                        <source srcset="./assets/img/Kassandra.webp" type="image/webp">
+                        <img src="./assets/img/Kassandra.png" alt="Kassandra"
+                            class="mx-auto h-64 object-contain rounded" />
+                    </picture>
+                    <div
+                        class="bg-[url(assets/img/pergamino.png)] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6">
+                        <h3 class="text-3xl font-assassin mb-3">Kassandra</h3>
+                        <p>Misthios espartanos con linaje Isu. Protagonista de Odyssey</p>
+                    </div>
+                </article>
+                <!-- Eivor Varinsdottir -->
+                <article class="relative ac-valhalla">
+                    <img src="./assets/img/ac_valhalla.png" alt="Imagen de fondo para Eivor Varinsdottir"
+                        class="effect absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0"/>
+                    <picture class="relative z-10">
+                        <source srcset="./assets/img/Eivor.avif" type="image/avif">
+                        <source srcset="./assets/img/Eivor.webp" type="image/webp">
+                        <img src="./assets/img/Eivor.png" alt="Eivor" class="mx-auto h-64 object-contain rounded "/>
+                    </picture>
+                    <div
+                        class="bg-[url(assets/img/pergamino.png)] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6 relative z-10">
+                        <h3 class="text-3xl font-assassin mb-3">Eivor Varinsdottir</h3>
+                        <p>Vikinga feroz que lleva la Hermandad a Inglaterra</p>
+                    </div>
+                </article>
+                <!-- Basim Ibn Ishaq -->
+                <article class="relative ac-mirage">
+                    <img src="./assets/img/ac_mirage.png" alt="Imagen de fondo para Basim Ibn Ishaq"
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-pulse"/>
+                    <picture class="relative z-10">
+                        <source srcset="./assets/img/Basim.avif" type="image/avif">
+                        <source srcset="./assets/img/Basim.webp" type="image/webp">
+                        <img src="./assets/img/Basim.png" alt="Basim" class="mx-auto h-64 object-contain rounded"/>
+                    </picture>
+                    <div
+                        class="bg-[url('assets/img/pergamino.png')] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6">
+                        <h3 class="text-3xl font-assassin mb-3">Basim Ibn Ishaq</h3>
+                        <p>Maestro del sigilo en Bagdad. Protagonista de Mirage</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!--Botones juegos-->
+
+        <section class="py-14 px-6 bg-black bg-opacity-70 bg-[url(assets/img/padded.png)]">
+            <h2 class="text-4xl font-assassin text-white mb-6 text-center">Explora los juegos</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-2xl max-w-4xl mx-auto">
+                <a href="origins.html"
+                    class="bg-[url('https://www.transparenttextures.com/patterns/stucco.png'),_linear-gradient(to_right,_#ca8a04,_#f59e0b,_#d97706)] bg-blend-overlay bg-repeat hover:brightness-110 transition duration-300 ease-in-out py-4 rounded text-black font-assassin w-full">
+                    Origins
+                </a>
+
+                <a href="odyssey.html"
+                    class="bg-[url(assets/img/dimension.png),_linear-gradient(to_right,_#0284c7,_#06b6d4,_#4f46e5)] bg-blend-overlay bg-repeat hover:brightness-110 transition duration-300 ease-in-out py-4 rounded text-white font-assassin w-full">Odyssey</a>
+
+                <a href="valhalla.html"
+                    class="bg-[url('assets/img/cartographer.png'),_linear-gradient(to_right,_#047857,_#0d9488,_#4338ca)] bg-blend-overlay bg-repeat hover:brightness-110 transition duration-300 ease-in-out py-4 rounded text-white font-assassin">Valhalla</a>
+
+                <a href="mirage.html"
+                    class="bg-[url(assets/img/arabesque.png),_linear-gradient(to_right,_#b45309,_#ea580c,_#f43f5e)] bg-blend-overlay bg-repeat hover:brightness-110 transition duration-300 ease-in-out py-4 rounded text-black font-assassin w-full">Mirage</a>
+            </div>
+        </section>
+
+        <!--Proyecto educativo-->
+
+        <section class="text-left text-lg text-gray-300 max-w-3xl mx-auto py-14 px-6">
+            <h2 class="text-4xl text-center font-assassin text-white mb-4">Proyecto educativo</h2>
+            <p>
+                Esta página web ha sido creada como parte de un proyecto personal para practicar desarrollo web frontend
+                con
+                Tailwind CSS. No representa contenido oficial ni está afiliada a Ubisoft. Su propósito es explorar
+                diseño, estructura y estilo web utilizando como inspiración la saga Assassin's Creed. </p>
+            <br>
+
+            <p>
+                Todas las imágenes,
+                logotipos y la propiedad intelectual de Assassin's Creed pertenecen
+                a
+                Ubisoft Entertainment. No se pretende ninguna infracción de derechos de autor.
+            </p>
+            <br>
+
+            <p>
+                Este sitio no tiene fines comerciales y se ha desarrollado con fines educativos y de práctica
+                profesional.
+            </p>
+            <br>
+
+            <p>
+                La información sobre los personajes, juegos y cronología ha sido recopilada desde la página oficial de
+                Ubisoft:
+                <a href="https://www.ubisoft.com/es-es/game/assassins-creed/games" target="_blank"
+                    class="text-red-400 transition-colors underline hover:text-red-300">
+                    ubisoft.com/assassins-creed
+                </a>
+            </p>
+            <br>
+
+            <p>Recursos:</p>
+            <ul class="list-disc list-inside text-gray-300 text-lg mt-4">
+                <li>Imágenes de fondo y logos:
+                    <a href="https://www.ubisoft.com/es-es/game/assassins-creed" target="_blank"
+                        rel="noopener noreferrer" class="text-red-400 transition-colors underline hover:text-red-300">
+                        www.ubisoft.com/es-es/game/assassins-creed
+                        <span class="sr-only">(se abre en una nueva pestaña)</span>
+                    </a>
+                </li>
+                <li> Imágenes de personajes e historia:
+                    <a href="https://assassinscreed.fandom.com/" target="_blank" rel="noopener noreferrer"
+                        class="text-red-400 transition-colors underline hover:text-red-300">
+                        Assassin's Creed Wiki (Fandom)
+                        <span class="sr-only">(se abre en una nueva pestaña)</span>
+                    </a>
+                </li>
+                <li>Textura transparente para el background:
+                    <a href="https://www.transparenttextures.com/" target="_blank" rel="noopener noreferrer"
+                        class="text-red-400 transition-colors underline hover:text-red-300">www.transparenttextures.com
+                        <span class="sr-only">(se abre en una nueva pestaña)</span>
+                    </a>
+                </li>
+                <li>Imágenes creadas en
+                    <a href="https://app.leonardo.ai/" target="_blank" rel="noopener noreferrer"
+                        class="text-red-400 transition-colors underline hover:text-red-300">
+                        Leonardo AI
+                        <span class="sr-only">(se abre en una nueva pestaña)</span>
+                    </a>
+                </li>
+                <li>Imágenes de otros elementos:
+                    <a href="https://www.canva.com/es_es/" target="_blank" rel="noopener noreferrer"
+                        class="text-red-400 transition-colors underline hover:text-red-300">
+                        Canva
+                        <span class="sr-only">(se abre en una nueva pestaña)</span></a>
+                </li>
+                <li>Imágenes convertidas a formatos optimizados (.webp, .avif, .png) en
+                    <a href="https://www.photopea.com/" target="_blank" rel="noopener noreferrer"
+                        class="text-red-400 transition-colors underline hover:text-red-300">
+                        Photopea
+                        <span class="sr-only">(se abre en una nueva pestaña)</span>
+                    </a>
+                </li>
+                <li>
+                    Keyframes: 
+                    <a href="https://www.cssportal.com/css-animation-generator/" target="_blank"
+                        class="text-red-400 transition-colors underline hover:text-red-300">
+                        CSS Portal
+                        <span class="sr-only">(se abre en una nueva pestaña)</span>
+                    </a>
+                </li>
+                <li>Las fuentes tipográficas utilizadas han sido descargadas desde:
+                    <a href="https://www.dafont.com/es/assassin.font" target="_blank"
+                        class="text-red-400 transition-colors underline hover:text-red-300">
+                        DaFont – Assassin Font
+                        <span class="sr-only">(se abre en una nueva pestaña)</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!--Acerca del proyecto-->
+
+        <section
+            class="py-14 px-6 bg-gray-950 bg-opacity-90 text-gray-300 bg-[url(assets/img/bg_animus.jpg)] bg-cover bg-blend-overlay">
+            <h2 class="text-4xl font-assassin text-white mb-6 text-center">Acerca del proyecto</h2>
+            <div class="max-w-3xl mx-auto space-y-6 text-lg leading-relaxed">
+                <p>
+                    Este sitio web ha sido desarrollado como parte de un proyecto educativo personal para practicar
+                    diseño y
+                    desarrollo web frontend. Utilizando tecnologías como <span
+                        class="text-red-400 font-semibold">HTML</span>, <span
+                        class="text-red-400 font-semibold">Tailwind</span> y <span
+                        class="text-red-400 font-semibold">JavaScript</span>, con enfoque en diseño responsive y
+                    optimización de imágenes.
+                </p>
+                <p>
+                    La temática elegida —<span class="text-red-400 font-semibold"> Assassin's Creed </span>— permite
+                    explorar
+                    estilos visuales inspirados en el Animus, organización de contenido narrativo, y estructura de
+                    navegación multipágina. El proyecto incluye secciones dedicadas a personajes, juegos, y referencias
+                    visuales.
+                </p>
+
+                <p>He escogido los juegos que más me gustan (por esa razón no aparecen todos los personajes, ni todos
+                    los juegos):</p>
+                <ul class="list-disc list-inside">
+                    <li>Origin's</li>
+                    <li>Odyssey</li>
+                    <li>Valhalla</li>
+                    <li>Mirage</li>
+                </ul>
+
+                <p>El objetivo principal es mejorar habilidades en:</p>
+                <ul class="list-disc list-inside">
+                    <li>Diseño mobile-first y adaptativo</li>
+                    <li>Optimización de imágenes con <code>&lt;picture&gt;</code></li>
+                    <li>Accesibilidad y usabilidad</li>
+                    <li>Organización de assets y estructura semántica</li>
+                    <li>Integración de fuentes personalizadas y estilo temático</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-6 text-lg text-slate-400 font-assassin">
+
+        <div class="mb-4 flex justify-center gap-6 text-white text-2xl">
+            <!-- GitHub -->
+            <a href="https://github.com/loli-digital" target="_blank" aria-label="GitHub"
+                class="transition hover:text-red-500">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.26.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.804 5.624-5.475 5.922.43.37.823 1.102.823 2.222v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/loli-guerrero/" target="_blank" aria-label="LinkedIn"
+                class="transition hover:text-red-500">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                </svg>
+                </svg>
+
+            </a>
+        </div>
+
+        <p>&copy; <span class="current__year"></span> Realizado por Loli G.F.</p>
+    </footer>
+
+    <script src="assets/js/script.js" defer></script>
+
+</body>
+
+</html>
