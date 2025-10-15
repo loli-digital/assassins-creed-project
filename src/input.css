@@ -22,6 +22,8 @@
     color: white;
   }
 
+  /*Index*/
+
   /*Máscara para el nombre y descripción del personaje*/
 
   .medieval-box {
@@ -69,34 +71,42 @@
   .ac-mirage:hover .effect-pulse {
     animation: pulse 3s ease-in-out 0s infinite normal none;
   }
+
+  /*Origins*/
+  @media (min-width: 768px) {
+  .clipped {
+    clip-path: polygon(0 0, 30% 0%, 0 100%, 0% 100%);
+  }
+}
 }
 
 /* Shake */
 @keyframes shake {
+
   0%,
   100% {
-	transform: translateY(0);
+    transform: translateY(0);
   }
 
   10%,
   30%,
   50%,
   70% {
-	transform: translateY(-8px);
+    transform: translateY(-8px);
   }
 
   20%,
   40%,
   60% {
-	transform: translateY(8px);
+    transform: translateY(8px);
   }
 
   80% {
-	transform: translateY(6.4px);
+    transform: translateY(6.4px);
   }
 
   90% {
-	transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
   }
 }
 
