@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 700); // tiempo de transición
     }, 5000); // tiempo entre frases
 
+    
 
+    //Fecha actualizada para el copyright
     document.querySelector(".current__year").textContent = new Date().getFullYear();
 });

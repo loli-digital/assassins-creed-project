@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Página web realizada en Tailwind sobre algunos juegos de la franquicia Assassin's Creed de Ubisoft">
+    <meta name="keywords"
+        content="html, css, tailwind, web, web design, web development,  responsive, responsive design, responsive web design, project, frontend project, frontend, assassin's creed, games, ubisoft">
+    <meta name="author" content="Loli G.F.">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+
+    <title>Assassin's Creed Origins</title>
+
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preload" href="Assassin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="Assassin.woff" as="font" type="font/woff" crossorigin>
+</head>
+
+<body class="bg-amber-800 bg-[url(assets/img/natural-paper.png)] text-gray-100 font-sans">
+
+    <header class="text-center">
+        <!-- Navbar -->
+        <nav class="bg-gray-600 p-4 flex items-center justify-between md:justify-evenly">
+            <div class="flex items-center gap-4">
+                <img src="assets/img/ac_franchise_logo_desktop.png" alt="Logo Assassin's Creed"
+                    class="w-28 object-contain">
+            </div>
+
+            <!-- Botón hamburguesa -->
+            <button id="menu-toggle"
+                class="md:hidden text-white focus:outline-none ml-auto transition-all duration-300 ease-in-out">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+
+            <!-- Enlaces de navegación -->
+            <ul id="menu" class="hidden md:flex gap-20 text-2xl text-white font-assassin group">
+                <li>
+                    <a href="index.html"
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white focus:border-white active:border-white transition-all duration-300 ease group-hover:text-gray-400 hover:text-white focus:text-slate-400 active:text-zinc-300 outline-none">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="origins.html" aria-current="page"
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">
+                        Origins
+                    </a>
+                </li>
+                <li>
+                    <a href="odyssey.html"
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">
+                        Odyssey
+                    </a>
+                </li>
+                <li>
+                    <a href="valhalla.html"
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">
+                        Valhalla
+                    </a>
+                </li>
+                <li>
+                    <a href="mirage.html"
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">
+                        Mirage
+                    </a>
+                </li>
+            </ul>
+
+            <div class="w-0 md:w-16"></div>
+        </nav>
+
+        <!-- Menú móvil desplegable -->
+        <ul id="mobile-menu"
+            class="md:hidden hidden flex-col bg-gray-900 text-white p-6 text-2xl text-right leading-16 font-assassin group">
+            <li>
+                <a href="index.html"
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Inicio</a>
+            </li>
+            <li>
+                <a href="origins.html"
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Origins</a>
+            </li>
+            <li>
+                <a href="odyssey.html"
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Odyssey</a>
+            </li>
+            <li>
+                <a href="valhalla.html"
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Valhalla</a>
+            </li>
+            <li>
+                <a href="mirage.html"
+                    class="pb-3  border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Mirage</a>
+            </li>
+        </ul>
+
+        <div class="flex flex-col md:flex-row items-center justify-between">
+
+            <!-- 📝 Título y descripción -->
+            <div class="md:w-1/3 flex items-center justify-center min-h-[60vh] sm:min-h-[80vh] bg-amber-600">
+                <div class="w-full md:w-1/3 text-white tracking-wide">
+                    <img src="assets/img/ac_origins_logo.png" alt="Logo Assassin's Creed Origins"
+                        class="w-24 mx-auto mb-6">
+
+                    <h1 class="text-6xl mb-2 font-assassin">Assassin's</h1>
+
+                    <div class="flex items-center justify-center gap-4 mb-2">
+                        <div class="h-px w-16 bg-slate-700"></div>
+                        <span class="text-3xl font-assassin">Creed</span>
+                        <div class="h-px w-16 bg-slate-700"></div>
+                    </div>
+
+                    <h2
+                        class="text-6xl text-amber-400 tracking-widest mb-6 text-shadow-sm text-shadow-amber-800 font-assassin">
+                        Origins
+                    </h2>
+
+                    <p class="text-lg italic text-slate-700">“Soy el último Medjay”</p>
+                </div>
+            </div>
+
+            <!-- Portada del juego -->
+            <picture class="md:w-2/3">
+                <source srcset="assets/img/ac_origins_header.avif" type="image/avif">
+                <source srcset="assets/img/ac_origins_header.webp" type="image/webp">
+                <img src="assets/img/ac_origins_header.jpg" alt="Imagen de portada"
+                    class="w-full h-auto object-cover" />
+            </picture>
+
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+
+    <main>
+
+        <!--Resumen del juego-->
+        <section class="px-2 md:px-8 py-20 text-white">
+            <h2 class="text-5xl text-center font-bold font-assassin my-6 mb-16">Resumen del Juego</h2>
+
+            <div class="flex flex-col items-center gap-20 md:gap-40 md:px-40">
+
+                <article
+                    class="w-full md:relative flex flex-col-reverse md:flex-row items-center md:items-start gap-2 md:gap-0">
+                    <picture class="md:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
+                        <source srcset="assets/img/resumen_1.avif" type="image/avif">
+                        <source srcset="assets/img/resumen_1.webp" type="image/webp">
+                        <img src="assets/img/resumen_1.png" alt="Imagen de Egipto"
+                            class="w-full h-auto rounded object-cover" />
+                    </picture>
+
+                    <div
+                        class="w-full md:w-lg md:h-72 md:absolute md:right-10 md:top-1/2 md:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-md border border-white text-white shadow-xl">
+                        <h3 class="text-4xl md:text-5xl font-assassin mb-4">Un país entero</h3>
+                        <p class="leading-relaxed text-lg">
+                            Desde los desiertos a los exuberantes oasis, del mar Mediterráneo a las tumbas de Guiza.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                    class="w-full md:relative flex flex-col-reverse md:flex-row-reverse items-center md:items-start gap-2 md:gap-0">
+                    <picture class="md:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
+                        <source srcset="assets/img/resumen_2.avif" type="image/avif">
+                        <source srcset="assets/img/resumen_2.webp" type="image/webp">
+                        <img src="assets/img/resumen_2.png" alt="Imagen de combate"
+                            class="w-full h-auto rounded object-cover shadow-md" />
+                    </picture>
+
+                    <div
+                        class="w-full md:w-lg md:h-72 md:absolute md:left-10 md:top-1/2 md:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-md border border-white text-white shadow-xl">
+                        <h3 class="text-4xl md:text-5xl font-assassin mb-4">Combate renovado</h3>
+                        <p class="leading-relaxed text-lg">
+                            Experimenta una forma completamente nueva de luchar mientras saqueas y usas cientos de
+                            armas.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                    class="w-full md:relative flex flex-col-reverse md:flex-row items-center md:items-start gap-2 md:gap-0">
+                    <picture class="md:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
+                        <source srcset="assets/img/resumen_3.avif" type="image/avif">
+                        <source srcset="assets/img/resumen_3.webp" type="image/webp">
+                        <img src="assets/img/resumen_3.png" alt="Imagen de Ptolomeo"
+                            class="w-full h-auto rounded object-cover shadow-md" />
+                    </picture>
+
+                    <div
+                        class="w-full md:w-lg md:h-72 md:absolute md:right-10 md:top-1/2 md:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-md border border-white text-white shadow-xl">
+                        <h3 class="text-4xl md:text-5xl font-assassin mb-4">Misiones memorables</h3>
+                        <p class="leading-relaxed text-lg">
+                            Sumérgete en una nueva aventura cada vez que juegas.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="w-full md:relative flex flex-col md:flex-row-reverse items-center md:items-start">
+                    <picture class="md:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
+                        <source srcset="assets/img/resumen_4.avif" type="image/avif">
+                        <source srcset="assets/img/resumen_4.webp" type="image/webp">
+                        <img src="assets/img/resumen_4.png" alt="Imagen de combate"
+                            class="w-full h-auto rounded object-cover shadow-md" />
+                    </picture>
+
+                    <div
+                        class="md:w-lg md:h-72 md:absolute md:left-10 md:top-1/2 md:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-md border border-white text-white shadow-xl">
+                        <h3 class="text-5xl font-assassin mb-4">Historia y personajes</h3>
+                        <p class="leading-relaxed text-lg">
+                            Egipto se tambalea bajo el gobierno de monarcas inexpertos.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!--Tráiler-->
+
+        <section class="flex flex-col items-center justify-center pt-0 md:pt-10 pb-30 px-4">
+            <h2 class="py-10  font-assassin text-5xl text-center">Tráiler del videojuego</h2>
+
+            <div class="w-full max-w-4xl aspect-video border-yellow-600 border-2 rounded">
+                <iframe class="w-full h-full rounded shadow-lg"
+                    src="https://www.youtube.com/embed/h5zuidDs0XY?si=uCwDsB6IAZUMMq7I" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section
+            class="relative w-full h-auto px-8 py-16 bg-[url(assets/img/bg-origins.webp)] bg-contain md:bg-cover bg-repeat md:bg-no-repeat bg-center border-y-yellow-600 border-y-2">
+
+            <div class="inset-0 bg-black/70 absolute"></div>
+
+            <h2 class="relative text-5xl text-center font-assassin mb-10">Galería de Imágenes</h2>
+
+            <div class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                <div class="hidden blur-sm scale-95 opacity-70"></div>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_1.avif" type="image/avif">
+                    <source srcset="assets/img/origins_1.webp" type="image/webp">
+                    <img src="assets/img/origins_1.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_2.avif" type="image/avif">
+                    <source srcset="assets/img/origins_2.webp" type="image/webp">
+                    <img src="assets/img/origins_2.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_3.avif" type="image/avif">
+                    <source srcset="assets/img/origins_3.webp" type="image/webp">
+                    <img src="assets/img/origins_3.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_4.avif" type="image/avif">
+                    <source srcset="assets/img/origins_4.webp" type="image/webp">
+                    <img src="assets/img/origins_4.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_5.avif" type="image/avif">
+                    <source srcset="assets/img/origins_5.webp" type="image/webp">
+                    <img src="assets/img/origins_5.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_6.avif" type="image/avif">
+                    <source srcset="assets/img/origins_6.webp" type="image/webp">
+                    <img src="assets/img/origins_6.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_7.avif" type="image/avif">
+                    <source srcset="assets/img/origins_7.webp" type="image/webp">
+                    <img src="assets/img/origins_7.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_8.avif" type="image/avif">
+                    <source srcset="assets/img/origins_8.webp" type="image/webp">
+                    <img src="assets/img/origins_8.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_9.avif" type="image/avif">
+                    <source srcset="assets/img/origins_9.webp" type="image/webp">
+                    <img src="assets/img/origins_9.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_10.avif" type="image/avif">
+                    <source srcset="assets/img/origins_10.webp" type="image/webp">
+                    <img src="assets/img/origins_10.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_11.avif" type="image/avif">
+                    <source srcset="assets/img/origins_11.webp" type="image/webp">
+                    <img src="assets/img/origins_11.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+                <picture
+                    class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
+                    <source srcset="assets/img/origins_12.avif" type="image/avif">
+                    <source srcset="assets/img/origins_12.webp" type="image/webp">
+                    <img src="assets/img/origins_12.png" alt="Captura 1" class="w-full h-auto rounded object-cover" />
+                </picture>
+
+            </div>
+        </section>
+
+        <!-- Características del juego -->
+        <section class="py-20 mx-10 md:mx-96 text-lg">
+            <h2 class="text-5xl text-center font-assassin mb-10">Assassin's Creed Origins</h2>
+            <p>Ambientado en el misterioso Antiguo Egipto, Assassin's Creed® Origins es un nuevo comienzo.
+                Experimenta
+                una nueva manera de luchar mientras exploras las grandes pirámides y las tumbas ocultas por todo el
+                país
+                en el Antiguo Egipto, y descubre muchas tramas memorables a lo largo de tu viaje. Y desvela la
+                historia
+                del origen de la Hermandad de los Asesinos.</p>
+            <br>
+            <p class="text-center"><span class="font-bold">Fecha de lanzamiento: </span>27 octubre 2017</p>
+            <br>
+            <p class="text-center"><span class="font-bold">Desarrollador: </span>Ubisoft Montreal</p>
+            <br>
+            <p class="text-center"><span class="font-bold">Género: </span>Acción / Aventura</p>
+            <br>
+            <p class="text-center"><span class="font-bold">Disponibilidad del juego: </span>PlayStation 4 / Xbox One
+                /
+                PC / Amazon Luna</p>
+            <br>
+            <p class="text-center">
+                <span class="font-bold">Enlace a la web oficial del juego:</span>
+                <a href="https://www.ubisoft.com/es-es/game/assassins-creed/origins" target="_blank"
+                    rel="noopener noreferrer">
+                    Assassin's Creed Origins
+                    <span class="sr-only">(se abre en una nueva pestaña)</span>
+                </a>
+            </p>
+        </section>
+
+        <!--Botones de los juegos-->
+
+        <section
+            class="py-14 px-6 bg-black bg-opacity-70 bg-[url(assets/img/padded.png)] border-y-yellow-600 border-y-2">
+            <h2 class="text-4xl font-assassin text-white mb-6 text-center">Explora los juegos</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-2xl max-w-3xl mx-auto">
+                <!--
+                <a href="origins.html"
+                    class="bg-[url('https://www.transparenttextures.com/patterns/stucco.png'),_linear-gradient(to_right,_#ca8a04,_#f59e0b,_#d97706)] bg-blend-overlay bg-repeat hover:brightness-110 transition duration-300 ease-in-out py-4 rounded text-black font-assassin w-full">
+                    Origins
+                </a>-->
+
+                <a href="odyssey.html"
+                    class="bg-[url(assets/img/dimension.png),_linear-gradient(to_right,_#0284c7,_#06b6d4,_#4f46e5)] bg-blend-overlay bg-repeat hover:brightness-110 transition duration-300 ease-in-out py-4 rounded text-white font-assassin w-full">Odyssey</a>
+
+                <a href="valhalla.html"
+                    class="bg-[url('assets/img/cartographer.png'),_linear-gradient(to_right,_#047857,_#0d9488,_#4338ca)] bg-blend-overlay bg-repeat hover:brightness-110 transition duration-300 ease-in-out py-4 rounded text-white font-assassin w-full">Valhalla</a>
+
+                <a href="mirage.html"
+                    class="bg-[url(assets/img/arabesque.png),_linear-gradient(to_right,_#b45309,_#ea580c,_#f43f5e)] bg-blend-overlay bg-repeat hover:brightness-110 transition duration-300 ease-in-out py-4 rounded text-black font-assassin w-full">Mirage</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!--Footer-->
+
+    <footer class="bg-gray-700 text-center py-6 text-lg text-slate-400 font-assassin">
+
+        <div class="mb-4 flex justify-center gap-6 text-white text-2xl">
+            <!-- GitHub -->
+            <a href="https://github.com/loli-digital" target="_blank" aria-label="GitHub"
+                class="transition hover:text-red-500">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.26.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.804 5.624-5.475 5.922.43.37.823 1.102.823 2.222v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/loli-guerrero/" target="_blank" aria-label="LinkedIn"
+                class="transition hover:text-red-500">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                </svg>
+                </svg>
+
+            </a>
+        </div>
+
+        <p>&copy; <span class="current__year"></span> Realizado por Loli G.F.</p>
+    </footer>
+
+</body>
+
+</html>
