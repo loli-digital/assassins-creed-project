@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,7 @@
 
     <header class="text-center">
         <!-- Navbar -->
-        <nav class="bg-gray-600 p-4 flex items-center justify-between md:justify-evenly">
+        <nav class="bg-gray-600 p-4 flex items-center justify-between md:justify-evenly" aria-label="Menú principal">
             <div class="flex items-center gap-4">
                 <img src="assets/img/ac_franchise_logo_desktop.png" alt="Logo Assassin's Creed"
                     class="w-28 object-contain">
@@ -105,7 +105,8 @@
             </li>
         </ul>
 
-        <img loading="eager" src="assets/img/logo.png" alt="Logo Assassin's Creed" class="mx-auto mt-16 w-25 opacity-20">
+        <img loading="eager" src="assets/img/logo.png" alt="Logo Assassin's Creed"
+            class="mx-auto mt-16 w-25 opacity-20">
 
         <div class="flex flex-col items-center font-assassin text-white tracking-wide">
             <h1 class="text-6xl -mt-1 -mb-3">Assassin's</h1>
@@ -252,7 +253,7 @@
                         <source srcset="./assets/img/Connor.avif" type="image/avif">
                         <source srcset="./assets/img/Connor.webp" type="image/webp">
                         <img loading="lazy" src="./assets/img/Connor.png" alt="Connor Kenway"
-                            class="mx-auto h-64 object-contain rounded"/>
+                            class="mx-auto h-64 object-contain rounded" />
                     </picture>
                     <div
                         class="bg-[url('assets/img/pergamino.png')] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6">
@@ -263,12 +264,12 @@
                 <!-- Arno Dorian -->
                 <article class="relative ac-unity">
                     <img loading="lazy" src="./assets/img/ac_unity.png" alt="Imagen de fondo para Arno Dorian"
-                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-shake"/>
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-shake" />
                     <picture class="relative z-10">
                         <source srcset="./assets/img/ArnoDorian.avif" type="image/avif">
                         <source srcset="./assets/img/ArnoDorian.webp" type="image/webp">
                         <img loading="lazy" src="./assets/img/ArnoDorian.png" alt="Arno Dorian"
-                            class="mx-auto h-64 object-contain rounded"/>
+                            class="mx-auto h-64 object-contain rounded" />
                     </picture>
                     <div
                         class="bg-[url('assets/img/pergamino.png')] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6 relative z-10">
@@ -279,7 +280,7 @@
                 <!-- Evie y Jacob Frye -->
                 <article class="relative ac-syndicate">
                     <img loading="lazy" src="./assets/img/ac_syndicate.png" alt="Imagen de fondo para Evie y Jacob Frye"
-                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 gear-spin"/>
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 gear-spin" />
                     <picture class="relative z-10">
                         <source srcset="./assets/img/Evie_Jacob_Frye.avif" type="image/avif">
                         <source srcset="./assets/img/Evie_Jacob_Frye.webp" type="image/webp">
@@ -295,12 +296,12 @@
                 <!-- Bayek de Siwa -->
                 <article class="relative ac-origins">
                     <img loading="lazy" src="./assets/img/ac_origins.png" alt="Imagen de fondo para Bayek de Siwa"
-                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect"/>
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect" />
                     <picture class="relative z-10">
                         <source srcset="./assets/img/Bayek.avif" type="image/avif">
                         <source srcset="./assets/img/Bayek.webp" type="image/webp">
                         <img loading="lazy" src="./assets/img/Bayek.png" alt="Bayek de Siwa"
-                            class="mx-auto h-64 object-contain rounded"/>
+                            class="mx-auto h-64 object-contain rounded" />
                     </picture>
                     <div
                         class="bg-[url(assets/img/pergamino.png)] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6">
@@ -311,7 +312,7 @@
                 <!-- Kassandra -->
                 <article class="relative ac-odyssey">
                     <img loading="lazy" src="./assets/img/ac_odyssey.png" alt="Imagen de fondo para Kassandra"
-                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-vibrate"/>
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-vibrate" />
                     <picture class="relative z-10">
                         <source srcset="./assets/img/Kassandra.avif" type="image/avif">
                         <source srcset="./assets/img/Kassandra.webp" type="image/webp">
@@ -327,11 +328,12 @@
                 <!-- Eivor Varinsdottir -->
                 <article class="relative ac-valhalla">
                     <img loading="lazy" src="./assets/img/ac_valhalla.png" alt="Imagen de fondo para Eivor Varinsdottir"
-                        class="effect absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0"/>
+                        class="effect absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0" />
                     <picture class="relative z-10">
                         <source srcset="./assets/img/Eivor.avif" type="image/avif">
                         <source srcset="./assets/img/Eivor.webp" type="image/webp">
-                        <img loading="lazy" src="./assets/img/Eivor.png" alt="Eivor" class="mx-auto h-64 object-contain rounded "/>
+                        <img loading="lazy" src="./assets/img/Eivor.png" alt="Eivor"
+                            class="mx-auto h-64 object-contain rounded " />
                     </picture>
                     <div
                         class="bg-[url(assets/img/pergamino.png)] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6 relative z-10">
@@ -342,11 +344,12 @@
                 <!-- Basim Ibn Ishaq -->
                 <article class="relative ac-mirage">
                     <img loading="lazy" src="./assets/img/ac_mirage.png" alt="Imagen de fondo para Basim Ibn Ishaq"
-                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-pulse"/>
+                        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-100 object-contain pointer-events-none z-0 effect-pulse" />
                     <picture class="relative z-10">
                         <source srcset="./assets/img/Basim.avif" type="image/avif">
                         <source srcset="./assets/img/Basim.webp" type="image/webp">
-                        <img loading="lazy" src="./assets/img/Basim.png" alt="Basim" class="mx-auto h-64 object-contain rounded"/>
+                        <img loading="lazy" src="./assets/img/Basim.png" alt="Basim"
+                            class="mx-auto h-64 object-contain rounded" />
                     </picture>
                     <div
                         class="bg-[url('assets/img/pergamino.png')] bg-no-repeat bg-center bg-cover medieval-box text-black p-6 rounded shadow-md max-w-md mx-auto mt-6">
@@ -457,7 +460,7 @@
                     </a>
                 </li>
                 <li>
-                    Keyframes: 
+                    Keyframes:
                     <a href="https://www.cssportal.com/css-animation-generator/" target="_blank"
                         class="text-red-400 transition-colors underline hover:text-red-300">
                         CSS Portal
@@ -518,9 +521,9 @@
         </section>
     </main>
 
-    <footer class="text-center py-6 text-lg text-slate-400 font-assassin">
+    <footer class="relative text-center py-6 text-lg text-slate-400 font-assassin">
 
-        <div class="mb-4 flex justify-center gap-6 text-white text-2xl">
+        <div class="relative mb-4 flex justify-center gap-6 text-white text-2xl">
             <!-- GitHub -->
             <a href="https://github.com/loli-digital" target="_blank" aria-label="GitHub"
                 class="transition hover:text-red-500">
@@ -539,7 +542,15 @@
                         d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
                 </svg>
                 </svg>
+            </a>
+        </div>
 
+        <div class="absolute right-1 bottom-1 p-2 rounded bg-slate-300 border-2 border-slate-950 transition-all duration-200 ease-in-out hover:shadow-[0_0_10px_shadow-yellow-800] hover:shadow-red-400 hover:bg-red-400">
+            <a href="#" class="text-slate-950" aria-label="Subir hacia arriba de la página">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                </svg>
             </a>
         </div>
 

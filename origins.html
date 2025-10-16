@@ -26,15 +26,14 @@
 
     <header class="text-center">
         <!-- Navbar -->
-        <nav class="bg-gray-600 p-4 flex items-center justify-between md:justify-evenly">
+        <nav class="bg-gray-600 p-4 flex items-center justify-between lg:justify-evenly" aria-label="Menú principal">
             <div class="flex items-center gap-4">
                 <img src="assets/img/ac_franchise_logo_desktop.png" alt="Logo Assassin's Creed"
                     class="w-28 object-contain">
             </div>
 
             <!-- Botón hamburguesa -->
-            <button id="menu-toggle"
-                class="md:hidden text-white focus:outline-none ml-auto transition-all duration-300 ease-in-out">
+            <button id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú de navegación"  class="lg:hidden text-white focus:outline-none focus:ring-2 focus:ring-slate-500 ml-auto transition-all duration-300 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -43,10 +42,10 @@
             </button>
 
             <!-- Enlaces de navegación -->
-            <ul id="menu" class="hidden md:flex gap-20 text-2xl text-white font-assassin group">
+            <ul id="menu" class="hidden lg:flex gap-20 text-2xl text-white font-assassin group">
                 <li>
                     <a href="index.html"
-                        class="pb-4.5 border-b-2 border-transparent hover:border-white focus:border-white active:border-white transition-all duration-300 ease group-hover:text-gray-400 hover:text-white focus:text-slate-400 active:text-zinc-300 outline-none">
+                        class="pb-4.5 border-b-2 border-transparent hover:border-white focus:border-white active:border-white transition-all duration-300 ease group-hover:text-gray-400 hover:text-white focus:text-slate-400 active:text-zinc-300 focus:outline-none focus:ring-2 focus:ring-slate-500">
                         Inicio
                     </a>
                 </li>
@@ -76,43 +75,43 @@
                 </li>
             </ul>
 
-            <div class="w-0 md:w-16"></div>
+            <div class="w-0 lg:w-16"></div>
         </nav>
 
         <!-- Menú móvil desplegable -->
         <ul id="mobile-menu"
-            class="md:hidden hidden flex-col bg-gray-900 text-white p-6 text-2xl text-right leading-16 font-assassin group">
+            class="lg:hidden hidden flex-col bg-[url(assets/img/natural-paper.png)] bg-amber-800 text-white p-6 text-3xl text-right leading-16 font-assassin group">
             <li>
                 <a href="index.html"
-                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Inicio</a>
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-amber-100 hover:text-white focus:border-white active:border-white">Inicio</a>
             </li>
             <li>
                 <a href="origins.html"
-                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Origins</a>
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-amber-100 hover:text-white focus:border-white active:border-white">Origins</a>
             </li>
             <li>
                 <a href="odyssey.html"
-                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Odyssey</a>
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-amber-100 hover:text-white focus:border-white active:border-white">Odyssey</a>
             </li>
             <li>
                 <a href="valhalla.html"
-                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Valhalla</a>
+                    class="pb-3 border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-amber-100 hover:text-white focus:border-white active:border-white">Valhalla</a>
             </li>
             <li>
                 <a href="mirage.html"
-                    class="pb-3  border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-gray-400 hover:text-white">Mirage</a>
+                    class="pb-3  border-b-2 border-transparent hover:border-white transition-all duration-300 ease-in-out group-hover:text-amber-100 hover:text-white focus:border-white active:border-white">Mirage</a>
             </li>
         </ul>
 
         <!--Título e imagen de portada-->
 
         <div
-            class="md:relative md:h-[80vh] flex flex-col md:flex-row items-center justify-between md:border-b-2 md:border-b-yellow-600">
+            class="lg:relative lg:h-[80vh] flex flex-col lg:flex-row items-center justify-between lg:border-b-2 lg:border-b-yellow-600">
 
             <!-- Título y descripción -->
             <div
-                class="w-full md:w-[35%] h-auto md:h-full py-6 md:p-0 flex items-center justify-center z-10 bg-amber-600">
-                <div class="w-full md:pl-10 text-white tracking-wide">
+                class="w-full lg:w-[35%] h-auto lg:h-full py-6 lg:p-0 flex items-center justify-center z-10 bg-amber-600">
+                <div class="w-full lg:pl-10 text-white tracking-wide">
                     <img loading="eager" src="assets/img/ac_origins_logo.png" alt="Logo Assassin's Creed Origins"
                         class="w-24 mx-auto mb-6">
 
@@ -134,16 +133,16 @@
             </div>
 
             <div
-                class="hidden md:block md:absolute md:left-[34.95%] md:top-[0.05%] md:w-1/3 md:h-[80vh] clipped bg-amber-600 z-0">
+                class="hidden lg:block lg:absolute lg:left-[34.95%] lg:top-[0.05%] lg:w-1/3 lg:h-[80vh] clipped bg-amber-600 z-0">
             </div>
 
             <!-- Portada del juego -->
             <picture
-                class="md:absolute md:right-0 h-full md:h-[80dvh] w-full md:flex md:justify-end md:items-center -z-10 md:border-none border-y-2 border-y-yellow-600">
+                class="lg:absolute lg:right-0 h-full lg:h-[80dvh] w-full lg:flex lg:justify-end lg:items-center -z-10 lg:border-none border-y-2 border-y-yellow-600">
                 <source srcset="assets/img/ac_origins_header.avif" type="image/avif">
                 <source srcset="assets/img/ac_origins_header.webp" type="image/webp">
-                <img loading="eager" src="assets/img/ac_origins_header.jpg" alt="Imagen de portada"
-                    class="w-full h-full object-cover object-center md:object-right md:max-w-[80%]" />
+                <img loading="eager" src="assets/img/ac_origins_header.jpg" alt="Bayek caminando hacia una ciudad egipcia con pirámides al fondo"
+                    class="w-full h-full object-cover object-center lg:object-right lg:max-w-[80%]" />
             </picture>
 
         </div>
@@ -154,14 +153,14 @@
     <main>
 
         <!--Resumen del juego-->
-        <section class="px-2 md:px-8 py-20 text-white">
+        <section class="px-2 xl:px-8 py-20 text-white">
             <h2 class="text-5xl text-center font-bold font-assassin my-6 mb-16">Resumen del Juego</h2>
 
-            <div class="flex flex-col items-center gap-20 md:gap-40 md:px-40">
+            <div class="flex flex-col items-center gap-20 xl:gap-40 lg:px-20 xl:px-40">
 
                 <article
-                    class="w-full md:relative flex flex-col-reverse md:flex-row items-center md:items-start gap-2 md:gap-0">
-                    <picture class="md:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
+                    class="w-full xl:relative flex flex-col-reverse lg:flex-row items-center lg:items-start gap-2 lg:gap-0">
+                    <picture class="lg:w-xl xl:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
                         <source srcset="assets/img/resumen_1.avif" type="image/avif">
                         <source srcset="assets/img/resumen_1.webp" type="image/webp">
                         <img loading="lazy" src="assets/img/resumen_1.png" alt="Imagen de Egipto"
@@ -169,8 +168,8 @@
                     </picture>
 
                     <div
-                        class="w-full md:w-lg md:h-72 md:absolute md:right-10 md:top-1/2 md:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-md border border-white text-white shadow-xl">
-                        <h3 class="text-4xl md:text-5xl font-assassin mb-4">Un país entero</h3>
+                        class="w-full lg:w-96 xl:w-lg lg:h-64 xl:h-72 lg:absolute lg:right-10 xl:top-1/2 lg:translate-y-8 xl:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 lg:p-10 rounded-md border border-white text-white shadow-xl">
+                        <h3 class="text-4xl xl:text-5xl font-assassin mb-4">Un país entero</h3>
                         <p class="leading-relaxed text-lg">
                             Desde los desiertos a los exuberantes oasis, del mar Mediterráneo a las tumbas de Guiza.
                         </p>
@@ -178,8 +177,8 @@
                 </article>
 
                 <article
-                    class="w-full md:relative flex flex-col-reverse md:flex-row-reverse items-center md:items-start gap-2 md:gap-0">
-                    <picture class="md:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
+                    class="w-full xl:relative flex flex-col-reverse lg:flex-row-reverse items-center xl:items-start gap-2 lg:gap-0">
+                    <picture class="lg:w-xl xl:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
                         <source srcset="assets/img/resumen_2.avif" type="image/avif">
                         <source srcset="assets/img/resumen_2.webp" type="image/webp">
                         <img loading="lazy" src="assets/img/resumen_2.png" alt="Imagen de combate"
@@ -187,8 +186,8 @@
                     </picture>
 
                     <div
-                        class="w-full md:w-lg md:h-72 md:absolute md:left-10 md:top-1/2 md:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-md border border-white text-white shadow-xl">
-                        <h3 class="text-4xl md:text-5xl font-assassin mb-4">Combate renovado</h3>
+                        class="w-full lg:w-96 xl:w-lg lg:h-64 xl:h-72 lg:absolute lg:left-10 xl:top-1/2 lg:-translate-y-0.5 xl:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 xl:p-10 rounded-md border border-white text-white shadow-xl">
+                        <h3 class="text-4xl xl:text-5xl font-assassin mb-4">Combate renovado</h3>
                         <p class="leading-relaxed text-lg">
                             Experimenta una forma completamente nueva de luchar mientras saqueas y usas cientos de
                             armas.
@@ -197,8 +196,8 @@
                 </article>
 
                 <article
-                    class="w-full md:relative flex flex-col-reverse md:flex-row items-center md:items-start gap-2 md:gap-0">
-                    <picture class="md:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
+                    class="w-full xl:relative flex flex-col-reverse lg:flex-row items-center lg:items-start gap-2 lg:gap-0">
+                    <picture class="lg:w-xl xl:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
                         <source srcset="assets/img/resumen_3.avif" type="image/avif">
                         <source srcset="assets/img/resumen_3.webp" type="image/webp">
                         <img loading="lazy" src="assets/img/resumen_3.png" alt="Imagen de Ptolomeo"
@@ -206,16 +205,17 @@
                     </picture>
 
                     <div
-                        class="w-full md:w-lg md:h-72 md:absolute md:right-10 md:top-1/2 md:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-md border border-white text-white shadow-xl">
-                        <h3 class="text-4xl md:text-5xl font-assassin mb-4">Misiones memorables</h3>
+                        class="w-full lg:w-96 xl:w-lg lg:h-64 xl:h-72 lg:absolute lg:right-10 xl:top-1/2 lg:translate-y-8 xl:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 lg:p-10 rounded-md border border-white text-white shadow-xl">
+                        <h3 class="text-4xl xl:text-5xl font-assassin mb-4">Misiones memorables</h3>
                         <p class="leading-relaxed text-lg">
                             Sumérgete en una nueva aventura cada vez que juegas.
                         </p>
                     </div>
                 </article>
 
-                <article class="w-full md:relative flex flex-col-reverse md:flex-row-reverse items-center md:items-start gap-2 md:gap-0">
-                    <picture class="md:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
+                <article
+                    class="w-full xl:relative flex flex-col-reverse lg:flex-row-reverse items-center xl:items-start gap-2 lg:gap-0">
+                    <picture class="lg:w-xl xl:w-2xl border-yellow-600 border-2 rounded shadow-2xl shadow-yellow-950">
                         <source srcset="assets/img/resumen_4.avif" type="image/avif">
                         <source srcset="assets/img/resumen_4.webp" type="image/webp">
                         <img loading="lazy" src="assets/img/resumen_4.png" alt="Imagen de combate"
@@ -223,7 +223,7 @@
                     </picture>
 
                     <div
-                        class="w-full md:w-lg md:h-72 md:absolute md:left-10 md:top-1/2 md:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-md border border-white text-white shadow-xl">
+                        class="w-full lg:w-96 xl:w-lg lg:h-64 xl:h-72 lg:absolute lg:left-10 xl:top-1/2 lg:-translate-y-0.5 xl:-translate-y-1/2 flex flex-col justify-center bg-white/10 backdrop-blur-md p-6 xl:p-10 rounded-md border border-white text-white shadow-xl">
                         <h3 class="text-5xl font-assassin mb-4">Historia y personajes</h3>
                         <p class="leading-relaxed text-lg">
                             Egipto se tambalea bajo el gobierno de monarcas inexpertos.
@@ -236,7 +236,7 @@
 
         <!--Tráiler-->
 
-        <section class="flex flex-col items-center justify-center pt-0 md:pt-10 pb-30 px-4">
+        <section class="flex flex-col items-center justify-center pt-0 lg:pt-10 pb-30 px-4">
             <h2 class="py-10  font-assassin text-5xl text-center">Tráiler del videojuego</h2>
 
             <div class="w-full max-w-4xl aspect-video border-yellow-600 border-2 rounded">
@@ -251,13 +251,13 @@
 
         <!-- Galería -->
         <section
-            class="relative w-full h-auto px-8 py-16 md:pt-16 md:pb-30 bg-[url(assets/img/bg-origins.webp)] bg-contain bg-repeat bg-center border-y-yellow-600 border-y-2">
+            class="relative w-full h-auto px-8 py-16 lg:pt-16 lg:pb-30 bg-[url(assets/img/bg-origins.webp)] bg-contain bg-repeat bg-center border-y-yellow-600 border-y-2">
 
             <div class="inset-0 bg-black/70 absolute"></div>
 
             <h2 class="relative text-5xl text-center font-assassin mb-10">Galería de Imágenes</h2>
 
-            <div class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+            <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="hidden blur-sm scale-95 opacity-70"></div>
 
                 <picture
@@ -360,7 +360,7 @@
         </section>
 
         <!-- Características del juego -->
-        <section class="py-20 mx-10 md:mx-96 text-lg">
+        <section class="py-20 mx-10 xl:mx-96 text-lg">
             <h2 class="text-5xl text-center font-assassin mb-10">Assassin's Creed Origins</h2>
             <p>Ambientado en el misterioso Antiguo Egipto, Assassin's Creed® Origins es un nuevo comienzo.
                 Experimenta
@@ -396,7 +396,7 @@
             class="py-14 px-6 bg-black bg-opacity-70 bg-[url(assets/img/padded.png)] border-y-yellow-600 border-y-2">
             <h2 class="text-4xl font-assassin text-white mb-6 text-center">Explora los juegos</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-2xl max-w-3xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 text-center text-2xl max-w-3xl mx-auto">
                 <!--
                 <a href="origins.html"
                     class="bg-[url('https://www.transparenttextures.com/patterns/stucco.png'),_linear-gradient(to_right,_#ca8a04,_#f59e0b,_#d97706)] bg-blend-overlay bg-repeat hover:brightness-110 transition duration-300 ease-in-out py-4 rounded text-black font-assassin w-full">
@@ -453,6 +453,8 @@
 
         <p>&copy; <span class="current__year"></span> Realizado por Loli G.F.</p>
     </footer>
+
+    <script src="assets/js/script.js" defer></script>
 
 </body>
 

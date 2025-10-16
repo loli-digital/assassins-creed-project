@@ -1,9 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector("#menu-toggle");
+    const mobileMenu = document.querySelector("#mobile-menu");
 
-    toggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+    toggle.addEventListener("click", () => {
+        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", !isExpanded);
+        mobileMenu.classList.toggle("hidden");
     });
 
     //Carrusel de frases
@@ -28,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 700); // tiempo de transición
     }, 5000); // tiempo entre frases
 
-    
+
 
     //Fecha actualizada para el copyright
     document.querySelector(".current__year").textContent = new Date().getFullYear();
