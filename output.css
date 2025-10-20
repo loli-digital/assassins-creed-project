@@ -18,6 +18,7 @@
     --color-amber-950: oklch(27.9% 0.077 45.635);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
     --color-yellow-700: oklch(55.4% 0.135 66.442);
+    --color-yellow-800: oklch(47.6% 0.114 61.907);
     --color-yellow-950: oklch(28.6% 0.066 53.813);
     --color-cyan-100: oklch(95.6% 0.045 203.388);
     --color-cyan-700: oklch(52% 0.105 223.128);
@@ -619,6 +620,9 @@
       background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
     }
   }
+  .bg-yellow-600 {
+    background-color: var(--color-yellow-600);
+  }
   .bg-yellow-700 {
     background-color: var(--color-yellow-700);
   }
@@ -918,6 +922,12 @@
       --tw-shadow-color: color-mix(in oklab, var(--color-amber-950) var(--tw-shadow-alpha), transparent);
     }
   }
+  .shadow-yellow-700 {
+    --tw-shadow-color: oklch(55.4% 0.135 66.442);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-yellow-700) var(--tw-shadow-alpha), transparent);
+    }
+  }
   .shadow-yellow-950 {
     --tw-shadow-color: oklch(28.6% 0.066 53.813);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1063,6 +1073,20 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-yellow-600);
+      }
+    }
+  }
+  .hover\:bg-yellow-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-yellow-700);
+      }
+    }
+  }
+  .hover\:bg-yellow-800 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-yellow-800);
       }
     }
   }
@@ -1236,6 +1260,11 @@
   .md\:px-16 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:text-left {
+    @media (width >= 48rem) {
+      text-align: left;
     }
   }
   .lg\:absolute {
@@ -1593,6 +1622,11 @@
   .xl\:px-40 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 40);
+    }
+  }
+  .xl\:text-left {
+    @media (width >= 80rem) {
+      text-align: left;
     }
   }
   .xl\:text-5xl {
