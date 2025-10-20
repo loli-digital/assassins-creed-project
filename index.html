@@ -34,8 +34,8 @@
             </div>
 
             <!-- Botón hamburguesa -->
-            <button id="menu-toggle"
-            aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú de navegación"
+            <button id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false"
+                aria-label="Abrir menú de navegación"
                 class="lg:hidden text-white focus:outline-none focus:ring-2 focus:ring-slate-500 ml-auto transition-all duration-300 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="size-6">
@@ -546,14 +546,14 @@
             </a>
         </div>
 
-        <div class="absolute right-1 bottom-1 p-2 rounded bg-slate-300 border-2 border-slate-950 transition-all duration-200 ease-in-out hover:shadow-[0_0_10px_shadow-yellow-800] hover:shadow-red-400 hover:bg-red-400">
-            <a href="#" class="text-slate-950" aria-label="Subir hacia arriba de la página">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-                </svg>
-            </a>
-        </div>
+        <a href="#"
+            class="text-slate-950 absolute right-1 bottom-1 p-2 rounded bg-slate-300 border-2 border-slate-950 transition-all duration-200 ease-in-out hover:shadow-[0_0_10px_shadow-yellow-800] hover:shadow-red-400 hover:bg-red-400"
+            aria-label="Subir hacia arriba de la página">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+        </a>
 
         <p>&copy; <span class="current__year"></span> Realizado por Loli G.F.</p>
     </footer>
