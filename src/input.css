@@ -30,6 +30,17 @@
     mask: radial-gradient(20px at 20px 20px, #0000 98%, #000) -20px -20px;
   }
 
+  .mirage-small-box {
+    mask: radial-gradient(15px at 15px 15px, #0000 98%, #000) -15px -15px;
+  }
+
+  @media (width >= 48rem) {
+
+    .mirage-box {
+      mask: radial-gradient(30px at 30px 30px, #0000 98%, #000) -30px -30px;
+    }
+  }
+
   /*Efectos imagen detrás del personaje*/
 
   .ac-unity:hover .effect-shake {
