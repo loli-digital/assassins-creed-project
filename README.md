@@ -8,3 +8,7 @@ Página web sobre algunos de los juegos que más me gustan de la saga Assassin's
 - Mirage
 
 Las imágenes como el contenido (textos, etc) se han obtenido de la web oficial
+
+Para ejecutar el proyecto en tu PC con Tailwind v4.1
+
+npx tailwindcss -i ./src/input.css -o ./output.css --watch
