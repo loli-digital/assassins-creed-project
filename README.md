@@ -1,3 +1,10 @@
 # Assassin's Creed Project
 
-Página web sobre algunos de los juegos que más me gustan de la saga AC, realizado en Tailwind
+Página web sobre algunos de los juegos que más me gustan de la saga Assassin's Creed, realizado en Tailwind v.4.1
+
+- Origins
+- Odyssey
+- Valhalla
+- Mirage
+
+Las imágenes como el contenido (textos, etc) se han obtenido de la web oficial
