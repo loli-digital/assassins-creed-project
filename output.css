@@ -2083,6 +2083,11 @@
       height: calc(var(--spacing) * 96);
     }
   }
+  .xl\:h-\[90dvh\] {
+    @media (width >= 80rem) {
+      height: 90dvh;
+    }
+  }
   .xl\:h-\[400px\] {
     @media (width >= 80rem) {
       height: 400px;
@@ -2091,6 +2096,11 @@
   .xl\:h-\[418px\] {
     @media (width >= 80rem) {
       height: 418px;
+    }
+  }
+  .xl\:h-auto {
+    @media (width >= 80rem) {
+      height: auto;
     }
   }
   .xl\:w-2xl {
@@ -2106,6 +2116,11 @@
   .xl\:w-5xl {
     @media (width >= 80rem) {
       width: var(--container-5xl);
+    }
+  }
+  .xl\:w-\[40\%\] {
+    @media (width >= 80rem) {
+      width: 40%;
     }
   }
   .xl\:w-lg {
