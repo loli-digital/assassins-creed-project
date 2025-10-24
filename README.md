@@ -11,7 +11,8 @@ Las imágenes como el contenido (textos, etc) se han obtenido de la web oficial
 
 Para ejecutar el proyecto en tu PC con Tailwind v4.1
 
-npx tailwindcss -i ./src/input.css -o ./output.css --watch
+npx tailwindcss -i ./src/input.css -o ./output.css --watch(con Tailwind v4 no se ejecuta npx tailwindcss...)
+(funciona con npm i -D tailwindcss @tailwindcss/cli)
 
 Puedes ver la web aquí:
 https://loli-digital.github.io/assassins-creed-project/
