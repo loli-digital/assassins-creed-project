@@ -18,11 +18,12 @@
     <title>Assassin's Creed Origins</title>
 
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="src/input.css">
     <link rel="preload" href="Assassin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="Assassin.woff" as="font" type="font/woff" crossorigin>
 </head>
 
-<body class="bg-amber-800 bg-[url(assets/img/natural-paper.png)] text-gray-100 font-sans">
+<body class="theme-origins bg-amber-800 bg-[url(assets/img/natural-paper.png)] text-gray-100 font-sans">
 
     <header class="text-center">
         <!-- Navbar -->
@@ -272,111 +273,113 @@
             <h2 class="relative text-5xl text-center font-assassin mb-10">Galería de Imágenes</h2>
 
             <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="hidden blur-sm scale-95 opacity-70"></div>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_1.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_1.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_1.png"
-                        alt="Paisaje de Egipto con pirámides al amanecer" class="w-full h-auto rounded object-cover" />
+                    <img  loading="lazy" src="assets/img/Origins/origins_1.png"
+                        alt="Paisaje de Egipto con pirámides al amanecer"
+                        class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_2.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_2.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_2.png"
-                        alt="Paisaje de Egipto con pirámides de noche" class="w-full h-auto rounded object-cover" />
+                    <img  loading="lazy" src="assets/img/Origins/origins_2.png"
+                        alt="Paisaje de Egipto con pirámides de noche"
+                        class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_3.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_3.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_3.png"
+                    <img  loading="lazy" src="assets/img/Origins/origins_3.png"
                         alt="Bayek subido a un camello recorriendo el desierto"
                         class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_4.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_4.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_4.png"
+                    <img  loading="lazy" src="assets/img/Origins/origins_4.png"
                         alt="Hermonso paisaje de Egipto con un oasis de fondo"
                         class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_5.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_5.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_5.png" alt="La misteriosa Esfinge"
+                    <img  loading="lazy" src="assets/img/Origins/origins_5.png" alt="La misteriosa Esfinge"
                         class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_6.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_6.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_6.png"
+                    <img  loading="lazy" src="assets/img/Origins/origins_6.png"
                         alt="Bayek en una tumba con una antorcha en la mano derecha"
                         class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_7.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_7.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_7.png"
+                    <img  loading="lazy" src="assets/img/Origins/origins_7.png"
                         alt="Hermoso paisaje del desierto acompañado por la luna llena"
                         class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_8.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_8.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_8.png"
-                        alt="Bayek observando las pirámides al anochecer" class="w-full h-auto rounded object-cover" />
+                    <img  loading="lazy" src="assets/img/Origins/origins_8.png"
+                        alt="Bayek observando las pirámides al anochecer"
+                        class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_9.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_9.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_9.png"
+                    <img  loading="lazy" src="assets/img/Origins/origins_9.png"
                         alt="Bayek realizando el famoso salto de los Assassin's"
                         class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_10.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_10.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_10.png"
+                    <img  loading="lazy" src="assets/img/Origins/origins_10.png"
                         alt="Bayek en una barquita típica de Egipto recorriendo el río Nilo"
                         class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_11.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_11.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_11.png"
+                    <img  loading="lazy" src="assets/img/Origins/origins_11.png"
                         alt="Bayek sujetando con el brazo derecho a Senu, su águila protectora"
                         class="w-full h-auto rounded object-cover" />
                 </picture>
 
-                <picture
+                <picture data-lightbox
                     class="border-yellow-600 border-2 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-yellow-700 hover:shadow-[0_0_10px_#ca8a04] cursor-pointer">
                     <source srcset="assets/img/Origins/origins_12.avif" type="image/avif">
                     <source srcset="assets/img/Origins/origins_12.webp" type="image/webp">
-                    <img loading="lazy" src="assets/img/Origins/origins_12.png"
-                        alt="Bayek observando las pirámides desde lo alto" class="w-full h-auto rounded object-cover" />
+                    <img  loading="lazy" src="assets/img/Origins/origins_12.png"
+                        alt="Bayek observando las pirámides desde lo alto"
+                        class="w-full h-auto rounded object-cover" />
                 </picture>
-
             </div>
         </section>
 
@@ -528,6 +531,7 @@
     </footer>
 
     <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/gallery.js" defer></script>
 
 </body>
 
