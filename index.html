@@ -17,7 +17,10 @@
 
     <title>Assassin's Creed Project</title>
 
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="output.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="output.css">
+    </noscript>
     <link rel="preload" href="assets/fonts/Assassin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/Assassin.woff" as="font" type="font/woff" crossorigin>
 
@@ -30,7 +33,8 @@
         <nav class="bg-gray-600 p-4 flex items-center justify-between md:justify-evenly" aria-label="Menú principal">
             <div class="flex items-center gap-4">
                 <a href="index.html">
-                    <img src="assets/img/ac_franchise_logo_desktop.png" alt="Logo Assassin's Creed"class="w-28 h-10 object-contain">
+                    <img src="assets/img/ac_franchise_logo_desktop.png" alt="Logo Assassin's Creed"
+                        class="w-28 h-10 object-contain">
                 </a>
             </div>
 
