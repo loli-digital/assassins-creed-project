@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="src/input.css">
     <link rel="preload" href="assets/fonts/Assassin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/Assassin.woff" as="font" type="font/woff" crossorigin>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
 </head>
 
 <body class="theme-mirage bg-emerald-950 bg-[url(assets/img/pattern_mirage.png)] bg-repeat bg-content bg-center text-gray-100 font-sans">
@@ -366,12 +368,9 @@
             <h2 class="py-10  font-assassin text-5xl text-center">Tráiler del videojuego</h2>
 
             <div class="w-full max-w-4xl aspect-video border-orange-800 border-2 rounded">
-                <iframe loading="lazy" class="w-full h-full rounded shadow-lg"
-                    src="https://www.youtube.com/embed/iBmaYo0W-p8?si=IKla_yYR-XeGhDid" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
+
+                <lite-youtube class="w-full h-full rounded shadow-lg" videoid="iBmaYo0W-p8"></lite-youtube>
+
             </div>
         </section>
 
